@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start"
   },
   "author": "vvilelaj",
   "license": "ISC",
@@ -18,7 +18,10 @@
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^3.1.0",
     "karma-mocha": "^2.0.1",
-    "mocha": "^8.3.0"
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-sinon": "^1.0.5",
+    "mocha": "^8.3.0",
+    "sinon": "^9.2.4"
   },
   "dependencies": {
     "express": "^4.17.1"

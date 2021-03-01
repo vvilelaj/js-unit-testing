@@ -1,0 +1,5 @@
+var IndexView = function(){
+    return {
+
+    };
+};

@@ -12,12 +12,19 @@ module.exports = function(config) {
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: [
       'mocha',
-      'chai'
+      'chai',
+      'sinon'
     ],
 
 
     // list of files / patterns to load in the browser
     files: [
+      'https://code.jquery.com/jquery-3.5.1.min.js',
+      // home files - Init
+      'src/assets/js/home/index.view.js',
+      'src/assets/js/home/index.presenter.js',
+      // home files - End
+
       'test/**/*tests.js'
     ],
 
@@ -36,7 +43,10 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: [
+      // 'progress',
+      'mocha'
+    ],
 
 
     // web server port
