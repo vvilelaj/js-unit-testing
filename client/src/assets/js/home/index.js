@@ -1,9 +1,10 @@
 var indexView = IndexView();
 var indexPresenter = IndexPresenter({
-    view : indexView
+    view: indexView,
+    localStorage: LocalStorage()
 });
 
 
 $(document).ready(function () {
-    //indexPresenter
+    indexPresenter.init();
 });

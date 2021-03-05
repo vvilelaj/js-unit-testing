@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0, user-scalable=no">
     <title>Client | Home </title>
 </head>
-<body>
-    <div id="Todo">
 
+<body>
+    <div id="todo" style="display: none;">
+        <p>Todo section.</p>
     </div>
-    <div id="GoToLogin">
+    <div id="go-to-login" style="display: none;">
         <p>No haz iniciado session.</p>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script src="../assets/js/_common/constants.js"></script>
+    <script src="../assets/js/_common/local-storage.js"></script>
+
     <script src="../assets/js/home/index.view.js"></script>
     <script src="../assets/js/home/index.presenter.js"></script>
     <script src="../assets/js/home/index.js"></script>
 </body>
+
 </html>

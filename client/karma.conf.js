@@ -19,7 +19,15 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      // Libraries - Init
       'https://code.jquery.com/jquery-3.5.1.min.js',
+      // Libraries - End
+
+      // General files - Init
+      'src/assets/js/_common/constants.js',
+      'src/assets/js/_common/local-storage.js',
+      // General files - End
+
       // home files - Init
       'src/assets/js/home/index.view.js',
       'src/assets/js/home/index.presenter.js',
