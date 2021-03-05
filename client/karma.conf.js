@@ -26,12 +26,18 @@ module.exports = function(config) {
       // General files - Init
       'src/assets/js/_common/constants.js',
       'src/assets/js/_common/local-storage.js',
+      'src/assets/js/_common/backend.apiclient.js',
       // General files - End
 
       // home files - Init
       'src/assets/js/home/index.view.js',
       'src/assets/js/home/index.presenter.js',
       // home files - End
+
+      // auth files - Init
+      'src/assets/js/auth/auth.view.js',
+      'src/assets/js/auth/auth.presenter.js',
+      // auth files - End
 
       'test/**/*tests.js'
     ],

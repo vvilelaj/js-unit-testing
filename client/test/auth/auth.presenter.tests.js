@@ -1,7 +1,7 @@
 
 'use strict';
 
-describe('Home - Index Presenter', function () {
+describe('Auth - Auth Presenter', function () {
   describe('Constructor', function () {
     var message = ''
     before(function () {
@@ -148,9 +148,9 @@ describe('Home - Index Presenter', function () {
     beforeEach(function () {
       // runs before each test in this block
       message = '';
-      view = IndexView();
+      view = AuthView();
       localStorage = LocalStorage();
-      presenter = IndexPresenter({
+      presenter = AuthPresenter({
         view: view,
         localStorage: localStorage
       });
@@ -161,31 +161,39 @@ describe('Home - Index Presenter', function () {
       sinon.restore();
     });
 
-    it('Should show message to log in when user is not logged', () => {
+    it('should show username field empty', () => {
       // Arrange
-      localStorage.getItem = sinon.stub();
-      localStorage.getItem.withArgs(Constants.localStorageKey.isUserLoggedIn).returns(false);
+      view.username = sinon.stub();
 
-      // Act 
+      // Act
       presenter.init();
 
       // Assert
-      expect(view.todoIsVisible()).to.equals(false);
-      expect(view.goToLoginIsVisible()).to.equals(true);
+      expect(view.username.calledWith('')).to.equals(true);
     });
 
-    it('Should show message to todo section when user is logged', () => {
+    it('should show password field empty', () => {
       // Arrange
-      localStorage.getItem = sinon.stub();
-      localStorage.getItem.withArgs(Constants.localStorageKey.isUserLoggedIn).returns(true);
+      view.password = sinon.stub();
 
-      // Act 
+      // Act
       presenter.init();
 
       // Assert
-      expect(view.todoIsVisible()).to.equals(true);
-      expect(view.goToLoginIsVisible()).to.equals(false);
+      expect(view.password.calledWith('')).to.equals(true);
     });
+
+    it('should add a handler to login button', () => {
+      // Arrange
+      view.login.onClickEventHandler = sinon.stub();
+
+      // Act
+      presenter.init();
+
+      // Assert
+      expect(typeof view.login.onClickEventHandler.getCall(0).args[0]).to.equals("function");
+    });
+
   });
 
 });

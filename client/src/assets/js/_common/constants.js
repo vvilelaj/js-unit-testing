@@ -6,8 +6,15 @@ var Constants = function () {
             isUserLoggedIn : 'isUserLoggedIn'
         };
     };
+    var _backedApiClient = function () {
+        return {
+            baseUrl : 'http://localhost:3001/',
+            apiAuthLoginPost : 'api/auth/login'
+        };
+    };
 
     return {
-        localStorageKey: _localStorageKey()
+        localStorageKey: _localStorageKey(),
+        backedApiClient: _backedApiClient()
     }
 }();
