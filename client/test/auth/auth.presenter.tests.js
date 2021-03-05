@@ -1,27 +1,27 @@
 
 'use strict';
 
-describe('Auth - Auth Presenter', function () {
-  describe('Constructor', function () {
+describe('Auth - Auth Presenter', () => {
+  describe('Constructor', () => {
     var message = ''
-    before(function () {
+    before(() => {
       // runs once before the first test in this block
     });
 
-    after(function () {
+    after(() => {
       // runs once after the last test in this block
     });
 
-    beforeEach(function () {
+    beforeEach(() => {
       // runs before each test in this block
       message = '';
     });
 
-    afterEach(function () {
+    afterEach(() => {
       // runs after each test in this block
     });
 
-    it('Should throw an error when config parameter is undefined', function () {
+    it('Should throw an error when config parameter is undefined', () => {
       // Act
       var config = undefined;
 
@@ -33,11 +33,11 @@ describe('Auth - Auth Presenter', function () {
       }
 
       // Assert
-      expect(message).to.have.string("config is null or undefined");;
+      expect(message).to.have.string("config is null or undefined");
 
     });
 
-    it('Should throw an error when config parameter is null', function () {
+    it('Should throw an error when config parameter is null', () => {
       // Act
       var config = null;
 
@@ -53,7 +53,7 @@ describe('Auth - Auth Presenter', function () {
 
     });
 
-    it('Should throw an error when config.view parameter is undefined', function () {
+    it('Should throw an error when config.view parameter is undefined', () => {
       // Act
       var config = {
         view: undefined
@@ -71,7 +71,7 @@ describe('Auth - Auth Presenter', function () {
 
     });
 
-    it('Should throw an error when config.view parameter is null', function () {
+    it('Should throw an error when config.view parameter is null', () => {
       // Act
       var config = {
         view: null
@@ -89,7 +89,7 @@ describe('Auth - Auth Presenter', function () {
 
     });
 
-    it('Should throw an error when config.localStorage parameter is undefined', function () {
+    it('Should throw an error when config.localStorage parameter is undefined', () => {
       // Act
       var config = {
         view: {},
@@ -108,7 +108,7 @@ describe('Auth - Auth Presenter', function () {
 
     });
 
-    it('Should throw an error when config.localStorage parameter is null', function () {
+    it('Should throw an error when config.localStorage parameter is null', () => {
       // Act
       var config = {
         view: {},
@@ -129,23 +129,23 @@ describe('Auth - Auth Presenter', function () {
 
   });
 
-  describe('init', function () {
+  describe('init', () => {
 
     var message;
     var view;
     var presenter;
     var localStorage;
 
-    before(function () {
+    before(() => {
       // runs once before the first test in this block
 
     });
 
-    after(function () {
+    after(() => {
       // runs once after the last test in this block
     });
 
-    beforeEach(function () {
+    beforeEach(() => {
       // runs before each test in this block
       message = '';
       view = AuthView();
@@ -156,7 +156,7 @@ describe('Auth - Auth Presenter', function () {
       });
     });
 
-    afterEach(function () {
+    afterEach(() => {
       // runs after each test in this block
       sinon.restore();
     });
@@ -191,8 +191,14 @@ describe('Auth - Auth Presenter', function () {
       presenter.init();
 
       // Assert
-      expect(typeof view.login.onClickEventHandler.getCall(0).args[0]).to.equals("function");
+      var handler = view.login.onClickEventHandler.getCall(0).args[0];
+      expect(typeof handler).to.equals("function");
+      expect(handler.name).to.have.string("onLoginClicked");
     });
+
+  });
+
+  describe('', () => {
 
   });
 
