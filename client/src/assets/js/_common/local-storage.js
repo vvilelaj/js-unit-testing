@@ -2,7 +2,7 @@
 
 var LocalStorage = function () {
 
-    var _setItem = function (data, key) {
+    var _setItem = function (key, data) {
         var value = JSON.stringify(data);
         localStorage.setItem(key, value);
     }

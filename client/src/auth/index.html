@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h3>Login Page</h3>
-    User : <input id="username">
-    Password : <input id="password" type="password">
-    <button id="login" type="button">Log In</button>
+    <span>User : </span><input id="username"><span id="username-required-message" style="display: none">*required</span>
+    <span>Password : </span><input id="password" type="password"><span id="password-required-message" style="display: none">*required</span>
+    <button id="login" type="button">Log In</button><span id="login-error-message" style="display: none">*required</span>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script src="../assets/js/_common/constants.js"></script>
+    <script src="../assets/js/_common/local-storage.js"></script>
+    <script src="../assets/js/_common/backend.apiclient.js"></script>
+
+    <script src="../assets/js/auth/auth.view.js"></script>
+    <script src="../assets/js/auth/auth.presenter.js"></script>
+    <script src="../assets/js/auth/index.js"></script>
 </body>
+
 </html>

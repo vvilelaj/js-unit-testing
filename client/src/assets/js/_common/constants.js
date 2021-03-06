@@ -3,7 +3,8 @@
 var Constants = function () {
     var _localStorageKey = function () {
         return {
-            isUserLoggedIn : 'isUserLoggedIn'
+            isUserLoggedIn : 'isUserLoggedIn',
+            userData : 'userData'
         };
     };
     var _backedApiClient = function () {
