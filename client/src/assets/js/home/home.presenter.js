@@ -15,12 +15,12 @@ var HomePresenter = function (config) {
         var userLoggedIn = _config.localStorage.getItem(Constants.localStorageKey.isUserLoggedIn) || false;
 
         if(!userLoggedIn){
-            _config.view.showTodoSection(false);
-            _config.view.showGoToLoginSection();
+            _config.view.todoSection.visible(false);
+            _config.view.goToLoginSection.visible(true);
             return 
         }
-        _config.view.showTodoSection();
-        _config.view.showGoToLoginSection(false);
+        _config.view.todoSection.visible(true);
+        _config.view.goToLoginSection.visible(false);
     };
 
     return {

@@ -13,38 +13,30 @@ var HomeView = function () {
         }
     }
 
-    var _showTodoSection = function (value) {
-        if (typeof (value) != "undefined" && !value) {
-            $(_elements.todoSection.id).hide();
-            _elements.todoSection.visible = false;
-            return;
-        }
-        $(_elements.todoSection.id).show();
-        _elements.todoSection.visible = true;
-    }
+    var _todoSectionVisible = function (value) {
+        if (typeof (value) == "undefined")
+            return _elements.todoSection.visible;
 
-    var _showGoToLoginSection = function (value) {
-        if (typeof (value) != "undefined" && !value) {
-            $(_elements.goToLoginSection.id).hide();
-            _elements.goToLoginSection.visible = false;
-            return;
-        }
-        $(_elements.goToLoginSection.id).show();
-        _elements.goToLoginSection.visible = true;
-    }
-
-    var _todoIsVisible = function () {
-        return _elements.todoSection.visible;
+        _elements.todoSection.visible = value;
+        if (value) $(_elements.todoSection.id).show();
+        if (!value) $(_elements.todoSection.id).hide();
     };
 
-    var _goToLoginIsVisible = function () {
-        return _elements.goToLoginSection.visible;
+    var _goToLoginSectionVisible = function (value) {
+        if (typeof (value) == "undefined")
+            return _elements.goToLoginSection.visible;
+
+        _elements.goToLoginSection.visible = value;
+        if (value) $(_elements.goToLoginSection.id).show();
+        if (!value) $(_elements.goToLoginSection.id).hide();
     };
 
     return {
-        todoIsVisible: _todoIsVisible,
-        goToLoginIsVisible: _goToLoginIsVisible,
-        showTodoSection: _showTodoSection,
-        showGoToLoginSection: _showGoToLoginSection
+        todoSection:{
+            visible : _todoSectionVisible
+        },
+        goToLoginSection:{
+            visible : _goToLoginSectionVisible
+        }
     };
 };

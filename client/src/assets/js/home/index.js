@@ -1,10 +1,10 @@
-var indexView = IndexView();
-var indexPresenter = IndexPresenter({
-    view: indexView,
+var homeView = HomeView ();
+var homePresenter = HomePresenter({
+    view: homeView,
     localStorage: LocalStorage()
 });
 
 
 $(document).ready(function () {
-    indexPresenter.init();
+    homePresenter.init();
 });

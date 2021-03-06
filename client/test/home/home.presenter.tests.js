@@ -170,8 +170,8 @@ describe('Home - Index Presenter', function () {
       presenter.init();
 
       // Assert
-      expect(view.todoIsVisible()).to.equals(false);
-      expect(view.goToLoginIsVisible()).to.equals(true);
+      expect(view.todoSection.visible()).to.equals(false);
+      expect(view.goToLoginSection.visible()).to.equals(true);
     });
 
     it('Should show message to todo section when user is logged', () => {
@@ -183,8 +183,8 @@ describe('Home - Index Presenter', function () {
       presenter.init();
 
       // Assert
-      expect(view.todoIsVisible()).to.equals(true);
-      expect(view.goToLoginIsVisible()).to.equals(false);
+      expect(view.todoSection.visible()).to.equals(true);
+      expect(view.goToLoginSection.visible()).to.equals(false);
     });
   });
 
