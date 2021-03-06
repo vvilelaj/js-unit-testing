@@ -1,6 +1,6 @@
 'use strict';
 
-var IndexPresenter = function (config) {
+var HomePresenter = function (config) {
 
     if (typeof (config) == "undefined" || config == null) throw "config is null or undefined";
     if (typeof (config.view) == "undefined" || config.view == null) throw "config.view is null or undefined";

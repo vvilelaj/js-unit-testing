@@ -30,8 +30,8 @@ module.exports = function(config) {
       // General files - End
 
       // home files - Init
-      'src/assets/js/home/index.view.js',
-      'src/assets/js/home/index.presenter.js',
+      'src/assets/js/home/home.view.js',
+      'src/assets/js/home/home.presenter.js',
       // home files - End
 
       // auth files - Init

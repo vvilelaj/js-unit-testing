@@ -27,7 +27,7 @@ describe('Home - Index Presenter', function () {
 
       // Arrange
       try {
-        var presenter = IndexPresenter(config);
+        var presenter = HomePresenter(config);
       } catch (error) {
         message = error;
       }
@@ -43,7 +43,7 @@ describe('Home - Index Presenter', function () {
 
       // Arrange
       try {
-        var presenter = IndexPresenter(config);
+        var presenter = HomePresenter(config);
       } catch (error) {
         message = error;
       }
@@ -61,7 +61,7 @@ describe('Home - Index Presenter', function () {
 
       // Arrange
       try {
-        var presenter = IndexPresenter(config);
+        var presenter = HomePresenter(config);
       } catch (error) {
         message = error;
       }
@@ -79,7 +79,7 @@ describe('Home - Index Presenter', function () {
 
       // Arrange
       try {
-        var presenter = IndexPresenter(config);
+        var presenter = HomePresenter(config);
       } catch (error) {
         message = error;
       }
@@ -98,7 +98,7 @@ describe('Home - Index Presenter', function () {
 
       // Arrange
       try {
-        var presenter = IndexPresenter(config);
+        var presenter = HomePresenter(config);
       } catch (error) {
         message = error;
       }
@@ -117,7 +117,7 @@ describe('Home - Index Presenter', function () {
 
       // Arrange
       try {
-        var presenter = IndexPresenter(config);
+        var presenter = HomePresenter(config);
       } catch (error) {
         message = error;
       }
@@ -148,9 +148,9 @@ describe('Home - Index Presenter', function () {
     beforeEach(function () {
       // runs before each test in this block
       message = '';
-      view = IndexView();
+      view = HomeView();
       localStorage = LocalStorage();
-      presenter = IndexPresenter({
+      presenter = HomePresenter({
         view: view,
         localStorage: localStorage
       });

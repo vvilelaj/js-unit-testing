@@ -1,6 +1,6 @@
 'use strict'
 
-var IndexView = function () {
+var HomeView = function () {
 
     var _elements = {
         todoSection: {
