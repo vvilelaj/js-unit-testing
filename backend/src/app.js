@@ -21,7 +21,8 @@ auth.route('/auth/login')
     console.log('POST');
     console.log(req.body);
     if (req.body.user == "vvilelaj" &&
-      req.body.pass == "vvilelaj")
+      req.body.pass == "vvilelaj" ||req.body.user == "garo" &&
+      req.body.pass == "garo" )
       res.status(200).jsonp({ success: true });
     else
       res.status(403).jsonp({ success: false });

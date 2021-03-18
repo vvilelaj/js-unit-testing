@@ -39,6 +39,11 @@ module.exports = function(config) {
       'src/assets/js/auth/auth.presenter.js',
       // auth files - End
 
+      // register files - Init
+      'src/assets/js/register/register.view.js',
+      'src/assets/js/register/register.presenter.js',
+      // register files - End
+
       'test/**/*tests.js'
     ],
 

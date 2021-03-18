@@ -17,9 +17,11 @@ var IndexPresenter = function (config) {
         if(!userLoggedIn){
             _config.view.showTodoSection(false);
             _config.view.showGoToLoginSection();
+            _config.view.showGoToLoginSection();
             return 
         }
         _config.view.showTodoSection();
+        _config.view.showGoToLoginSection(false);
         _config.view.showGoToLoginSection(false);
     };
 
